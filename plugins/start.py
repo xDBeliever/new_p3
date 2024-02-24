@@ -57,11 +57,11 @@ async def start_command(client: Client, message: Message):
         if "verify_" in message.text:
             _, token = message.text.split("_", 1)
             if verify_status['verify_token'] != token:
-                return await message.reply("Your token is invalid or Expired. Try again by clicking /start")
+                return await message.reply("𝙔𝙤𝙪𝙧 𝙏𝙤𝙠𝙚𝙣 𝙄𝙨 𝙄𝙣𝙫𝙖𝙡𝙞𝙙 𝙊𝙧 𝙀𝙭𝙥𝙞𝙧𝙚𝙙. 𝙏𝙧𝙮 𝘼𝙜𝙖𝙞𝙣 𝘽𝙮 𝘾𝙡𝙞𝙘𝙠𝙞𝙣𝙜 /start")
             await update_verify_status(id, is_verified=True, verified_time=time.time())
             if verify_status["link"] == "":
                 reply_markup = None
-            await message.reply(f"Congratulations!! Ads Token Refreshed Successfully!\n\nIt Will Expire After 24 Hours.", reply_markup=reply_markup, protect_content=True, quote=True)
+            await message.reply(f"𝘾𝙤𝙣𝙜𝙧𝙖𝙩𝙪𝙡𝙖𝙩𝙞𝙤𝙣𝙨 !! ✅ 𝙔𝙤𝙪𝙧 𝙏𝙤𝙠𝙚𝙣 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮  𝙄𝙨 𝙑𝙚𝙧𝙞𝙛𝙞𝙚𝙙 𝘼𝙣𝙙 𝙑𝙖𝙡𝙞𝙙 𝙁𝙤𝙧 -> 24 𝙃𝙤𝙪𝙧𝙨", reply_markup=reply_markup, protect_content=True, quote=True)
 
         elif len(message.text) > 7 and verify_status['is_verified']:
             try:
@@ -149,7 +149,7 @@ async def start_command(client: Client, message: Message):
                     [InlineKeyboardButton("𝘾𝙡𝙞𝙘𝙠 𝙃𝙚𝙧𝙚 𝙏𝙤 𝙍𝙚𝙛𝙧𝙚𝙨𝙝 𝙏𝙤𝙠𝙚𝙣", url=link)],
                     [InlineKeyboardButton(' 🗳️ Tutorial 🗳️  ', url=full_tut_url)]
                 ]
-                await message.reply(f"⚠️ 𝘠𝘰𝘶𝘳 𝘈𝘥𝘴 𝘛𝘰𝘬𝘦𝘯 𝘐𝘴 𝘌𝘹𝘱𝘪𝘳𝘦𝘥, 𝘙𝘦𝘧𝘳𝘦𝘴𝘩 𝘠𝘰𝘶𝘳 𝘛𝘰𝘬𝘦𝘯 𝘈𝘯𝘥 𝘛𝘳𝘺 𝘈𝘨𝘢𝘪𝘯.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\n𝘞𝘩𝘢𝘵 𝘐𝘴 𝘛𝘩𝘦 𝘛𝘰𝘬𝘦𝘯?\n\n𝘛𝘩𝘪𝘴 𝘐𝘴 𝘈𝘯 𝘈𝘥𝘴 𝘛𝘰𝘬𝘦𝘯. 𝘐𝘧 𝘠𝘰𝘶 𝘗𝘢𝘴𝘴 1 𝘈𝘥, 𝘠𝘰𝘶 𝘊𝘢𝘯 𝘜𝘴𝘦 𝘛𝘩𝘦 𝘉𝘰𝘵 𝘍𝘰𝘳 24 𝘏𝘰𝘶𝘳𝘴 𝘈𝘧𝘵𝘦𝘳 𝘗𝘢𝘴𝘴𝘪𝘯𝘨 𝘛𝘩𝘦 𝘈𝘥/n/n𝘞𝘢𝘵𝘤𝘩 𝘝𝘪𝘥𝘦𝘰 𝘛𝘶𝘵𝘰𝘳𝘪𝘢𝘭 𝘐𝘧 𝘠𝘰𝘶'𝘳𝘦 𝘍𝘢𝘤𝘪𝘯𝘨 𝘐𝘴𝘴𝘶𝘦." 
+                await message.reply(f"⚠️ 𝘠𝘰𝘶𝘳 𝘈𝘥𝘴 𝘛𝘰𝘬𝘦𝘯 𝘐𝘴 𝘌𝘹𝘱𝘪𝘳𝘦𝘥, 𝘙𝘦𝘧𝘳𝘦𝘴𝘩 𝘠𝘰𝘶𝘳 𝘛𝘰𝘬𝘦𝘯 𝘈𝘯𝘥 𝘛𝘳𝘺 𝘈𝘨𝘢𝘪𝘯.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\n𝘞𝘩𝘢𝘵 𝘐𝘴 𝘛𝘩𝘦 𝘛𝘰𝘬𝘦𝘯?\n\n𝘛𝘩𝘪𝘴 𝘐𝘴 𝘈𝘯 𝘈𝘥𝘴 𝘛𝘰𝘬𝘦𝘯. 𝘐𝘧 𝘠𝘰𝘶 𝘗𝘢𝘴𝘴 1 𝘈𝘥, 𝘠𝘰𝘶 𝘊𝘢𝘯 𝘜𝘴𝘦 𝘛𝘩𝘦 𝘉𝘰𝘵 𝘍𝘰𝘳 24 𝘏𝘰𝘶𝘳𝘴 𝘈𝘧𝘵𝘦𝘳 𝘗𝘢𝘴𝘴𝘪𝘯𝘨 𝘛𝘩𝘦 𝘈𝘥\n\n𝘞𝘢𝘵𝘤𝘩 𝘝𝘪𝘥𝘦𝘰 𝘛𝘶𝘵𝘰𝘳𝘪𝘢𝘭 𝘐𝘧 𝘠𝘰𝘶'𝘳𝘦 𝘍𝘢𝘤𝘪𝘯𝘨 𝘐𝘴𝘴𝘶𝘦." 
                 , reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
 
 # ... (rest of the code remains unchanged))
@@ -172,7 +172,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel",
+                "𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙣𝙣𝙚𝙡",
                 url = client.invitelink)
         ]
     ]
@@ -180,7 +180,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = '𝙏𝙧𝙮 𝘼𝙜𝙖𝙞𝙣',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -207,7 +207,7 @@ async def get_users(client: Bot, message: Message):
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
 
-@Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS + ['5447083924']))
+@Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS + ['6328168464']))
 async def send_text(client: Bot, message: Message):
     if message.reply_to_message:
         query = await full_userbase()
