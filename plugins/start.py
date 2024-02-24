@@ -35,7 +35,7 @@ from shortzy import Shortzy
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
-    owner_id = ADMINS + ['5447083924']  # Fetch the owner's ID from config
+    owner_id = ADMINS + ['6328168464']  # Fetch the owner's ID from config
 
     # Check if the user is the owner
     if id == owner_id:
@@ -61,7 +61,7 @@ async def start_command(client: Client, message: Message):
             await update_verify_status(id, is_verified=True, verified_time=time.time())
             if verify_status["link"] == "":
                 reply_markup = None
-            await message.reply(f"â Your token successfully verified and valid for: 24 Hour", reply_markup=reply_markup, protect_content=True, quote=True)
+            await message.reply(f"Congratulations!! Ads Token Refreshed Successfully!\n\nIt Will Expire After 24 Hours.", reply_markup=reply_markup, protect_content=True, quote=True)
 
         elif len(message.text) > 7 and verify_status['is_verified']:
             try:
@@ -121,8 +121,8 @@ async def start_command(client: Client, message: Message):
 
         elif verify_status['is_verified']:
             reply_markup = InlineKeyboardMarkup(
-                [[InlineKeyboardButton("ð About Me", callback_data="about"),
-                  InlineKeyboardButton("ð Close", callback_data="close")]]
+                [[InlineKeyboardButton("🤗 About Me", callback_data="about"),
+                  InlineKeyboardButton("🔐 Close", callback_data="close")]]
             )
             await message.reply_text(
                 text=START_MSG.format(
@@ -147,9 +147,10 @@ async def start_command(client: Client, message: Message):
                 link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API,f'https://telegram.dog/{client.username}?start=verify_{token}')
                 btn = [
                     [InlineKeyboardButton("Click here", url=link)],
-                    [InlineKeyboardButton(' Tutorial ', url=full_tut_url)]
+                    [InlineKeyboardButton(' Tutorial Video ', url=full_tut_url)]
                 ]
-                await message.reply(f"Your Ads token is expired, refresh your token and try again.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. If you pass 1 ad, you can use the bot for 24 Hour after passing the ad.", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
+                await message.reply(f"Your Ads Token is Expired, Refresh your Token And Try Again.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is token?\n\nThis is An Ads Token. If You Pass 1 Ad, You Can Use The Bot For 24 Hours After Passing The Ad.\n\nAPPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER" 
+                , reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
 
 # ... (rest of the code remains unchanged))
 
