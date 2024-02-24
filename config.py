@@ -35,7 +35,7 @@ SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "Instantearn.in")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "5b4af2fa7702ac014be08b5db557a2beac193563")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID","leakhubd/1264")
+TUT_VID = os.environ.get("TUT_VID","How_To_Open_Ads_Link/4")
 
 
 #force sub channel id, if you want enable force sub
