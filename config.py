@@ -31,8 +31,8 @@ PORT = os.environ.get("PORT", "8080")
 DB_URI = "mongodb+srv://ChikenDb:xJJunLHz6ZzAruqe@cluster0.usbia1c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "Instantearn.in")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "5b4af2fa7702ac014be08b5db557a2beac193563")
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "KingUrl.in")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "fc3f51f3e909f6a7236094d52d7e7669e8db3e21")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","How_To_Open_Ads_Link/4")
